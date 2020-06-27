@@ -2,9 +2,11 @@ pipeline
 {
 	agent any
 	 environment {
-        MAJOR_VERSION = 1
+                 MAJOR_VERSION = 1
 		 //hardcoded for now - need to remove below line//
 		 BRANCH_NAME = 'master'
+		 //hardcoded -need to change for each agent//
+		 NODE_IP = 'http://54.146.16.37'
           } 
 	stages
 	{
@@ -53,8 +55,8 @@ pipeline
 	      stage("Running on CentOS") {
      
               steps {
-                  sh "wget -6 http://ketanvj3c.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
-                  sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
+		      sh "wget -6 ${env.NODE_IP}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+                      sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
                     }
                }
 		
