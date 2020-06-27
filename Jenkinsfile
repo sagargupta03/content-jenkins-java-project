@@ -24,7 +24,7 @@ pipeline
 			post {
                            success {
 				   echo 'result of build.xml is success '
-                              // archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
+                                archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
                               }
       }
 		}
