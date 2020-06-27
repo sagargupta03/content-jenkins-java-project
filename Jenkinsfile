@@ -17,9 +17,16 @@ pipeline
 		stage('Build') 
 		{
 		steps {
-			 sh 'ant -f build.xml -v' 
-                  	echo 'Ant Build from build.xml step added in Building..'			
+			echo 'Ant Build from build.xml step added in Building..' 
+			sh 'ant -f build.xml -v' 
+                  				
 		      }
+			post {
+                           success {
+				   echo 'result of build.xml is success '
+                              // archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
+                              }
+      }
 		}
 		stage('Test')
 		{
