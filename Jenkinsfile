@@ -6,7 +6,7 @@ pipeline
 		 //hardcoded for now - need to remove below line//
 		 BRANCH_NAME = 'master'
 		 //hardcoded -need to change for each agent//
-		 NODE_IP = 'http://54.146.16.37:80'
+		 NODE_IP = 'http://54.146.16.37'
           } 
 	stages
 	{
@@ -58,7 +58,7 @@ pipeline
 		     // ls "${env.NODE_IP}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
 		      echo "wget -6 ${env.NODE_IP}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
 		      echo "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
-		      sh "wget -6 ${env.NODE_IP}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+		    //  sh "wget -6 ${env.NODE_IP}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
                       sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
                     }
                }
