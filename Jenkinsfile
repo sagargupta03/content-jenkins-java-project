@@ -17,8 +17,8 @@ pipeline
 		stage('Build') 
 		{
 		steps {
-			// sh 'ant -f build.xml -v' //
-                  	echo 'Building..'			
+			 sh 'ant -f build.xml -v' 
+                  	echo 'Ant Build from build.xml step added in Building..'			
 		      }
 		}
 		stage('Test')
