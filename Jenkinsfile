@@ -3,6 +3,8 @@ pipeline
 	agent any
 	 environment {
         MAJOR_VERSION = 1
+		 //hardcoded for now - need to remove below line//
+		 BRANCH_NAME = master
           } 
 	stages
 	{
