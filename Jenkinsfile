@@ -49,7 +49,7 @@ pipeline
 			        echo "env.USER $env.USER"
                     sh "if ! [ -d '/var/www/html/rectangles/all/${env.BRANCH_NAME}' ]; then sudo mkdir -p /var/www/html/rectangles/all/${env.BRANCH_NAME}; fi"
                 //    sh "sudo cp dist/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BRANCH_NAME}/"
-			sh " sudo cp /var/lib/jenkins/workspace/Jenkins Practice 1/Ant-Project-Demo-Ketan-Assignment/dist/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BRANCH_NAME}/" 	
+			sh " sudo cp /dist/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BRANCH_NAME}/" 	
 		      }
 		}
 	      stage("Running on CentOS") {
