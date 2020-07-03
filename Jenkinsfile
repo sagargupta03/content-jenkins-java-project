@@ -8,7 +8,7 @@ pipeline
 		 //hardcoded for now - need to remove below line//
 		 BRANCH_NAME = 'master'
 		 //hardcoded -need to change for each agent//
-		 NODE_IP = 'http://3.81.89.54'
+		 NODE_IP = 'http://54.80.24.38'
           } 
 	stages
 	{
