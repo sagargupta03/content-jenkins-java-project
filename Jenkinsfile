@@ -1,14 +1,16 @@
 pipeline
 {
 	agent 
-	{ label 'staging'
+	{ 
+		//label 'staging'
+		label 'master'
 	}
 	 environment {
                  MAJOR_VERSION = 1
 		 //hardcoded for now - need to remove below line//
 		 BRANCH_NAME = 'master'
 		 //hardcoded -need to change for each agent//
-		 NODE_IP = 'http://54.80.24.38'
+		 NODE_IP = 'http://3.83.130.130'
           } 
 	stages
 	{
