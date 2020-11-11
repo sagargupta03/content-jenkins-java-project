@@ -1,11 +1,11 @@
 pipeline
 {
-	agent any
-//	agent 
-//	{ 
-		//label 'staging'
-//		label 'master'
-//	}
+//	agent any
+	agent 
+	{ 
+		label 'slave'
+		//label 'master'
+	}
 	 environment {
                  MAJOR_VERSION = 1
 		 //hardcoded for now - need to remove below line//
