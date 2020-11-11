@@ -12,7 +12,8 @@ pipeline
 		 BRANCH_NAME = 'master'
 		 //hardcoded -need to change for each agent//
 	//	 NODE_IP = 'http://54.82.36.157/'
-		 NODE_IP = '54.82.36.157'
+		// NODE_IP = '54.82.36.157'  //master IP
+		  NODE_IP = '54.157.185.255' //slave IP
           } 
 	stages
 	{
