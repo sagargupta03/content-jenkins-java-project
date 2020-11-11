@@ -3,8 +3,8 @@ pipeline
 //	agent any
 	agent 
 	{ 
-		label 'slave'
-		//label 'master'
+		//label 'slave'
+		label 'master'
 	}
 	 environment {
                  MAJOR_VERSION = 1
