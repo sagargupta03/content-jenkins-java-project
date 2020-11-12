@@ -3,8 +3,8 @@ pipeline
 //	agent any
 	agent 
 	{ 
-		label 'slave'
-		//label 'master'
+		//label 'slave'
+		label 'master'
 	}
 	 environment {
                  MAJOR_VERSION = 1
@@ -12,8 +12,8 @@ pipeline
 		 BRANCH_NAME = 'master'
 		 //hardcoded -need to change for each agent//
 	//	 NODE_IP = 'http://54.82.36.157/'
-		// NODE_IP = '54.82.36.157'  //master IP
-		  NODE_IP = '54.157.185.255' //slave IP
+		 NODE_IP = '3.86.98.239'  //master IP
+		//  NODE_IP = '54.157.185.255' //slave IP
           } 
 	stages
 	{
