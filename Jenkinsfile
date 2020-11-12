@@ -67,7 +67,7 @@ pipeline
 	          	     // ls "${env.NODE_IP}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
 		           echo "Promote to Green" 
 			   sh "if ! [ -d '/var/www/html/rectangles/green/${env.BRANCH_NAME}' ]; then sudo mkdir -p /var/www/html/rectangles/green/${env.BRANCH_NAME}; fi"
-		           sh "cp /var/www/html/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+		           sh "sudo cp /var/www/html/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
 		              }
                         }
 	}
